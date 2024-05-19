@@ -11,16 +11,17 @@
 # **************************************************************************** #
 NAME = libft.a
 FLAGS = -Wall -Wextra -Werror
-
+SRC = *.c
 
 all:	$(NAME)
 
 $(NAME):
-	@gcc $(FLAGS) libft.h *.c 
+	@gcc $(FLAGS) libft.h $(SRC) 
 
 run:	$(NAME)
 	@./a.out
-
+norm:
+	@norminette $(SRC)
 clean:
 	@rm -rf *.out
 
